@@ -1,0 +1,18 @@
+# Load your dataset
+data <- read.csv("your_data.csv")
+
+# Numeric Summary for Column 1
+summary_col1 <- summary(data$column1)
+
+# Numeric Summary for Column 2
+summary_col2 <- summary(data$column2)
+
+# Categorical Summary for Column 3
+unique_values_col3 <- unique(data$column3)
+count_values_col3 <- table(data$column3)
+
+# Print the summaries
+cat("Numeric Summary for Column 1:\n", summary_col1, "\n\n")
+cat("Numeric Summary for Column 2:\n", summary_col2, "\n\n")
+cat("Categorical Summary for Column 3:\n")
+print(data.frame(Value = unique_values_col3, Count = count_values_col3))
